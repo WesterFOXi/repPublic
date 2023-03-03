@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .conteinter{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr; указывает размер  в ширине колонки */
+            /* grid-template-columns: repeat(4, 50px); repeat(количество, размер) */
+            grid-template-columns: 1fr 1fr;
+
+            /* grid-template-rows: 100px; указывает размер длины строки */
+            /* grid-template-rows: repeat(1, 70px); */
+            /* grid-template-rows: 200px; */
+
+            /* grid-column-gap: 30px; позволяет выставлять отступы между колонками */
+            grid-column-gap: 10px;
+
+            /* grid-row-gap: 10px; позволяет задавать отступы между столбцами */
+            /* grid-row-gap: 10px; */
+
+            /* grid-gap: 10px;  позволяет задавать отступы между колонками и столбцами  */
+            grid-gap: 10px;
+
+            /* grid-auto-rows: 100px; задаёт длину строки, у которой не заданая  длина */
+            /* grid-auto-rows: 50px; */
+            grid-auto-rows: minmax(50px, auto);
+            /* minmax(высота строки минимум, макс. высота строки)*/
+
+            justify-content: center;
+            /* justify-conent: start, center, end; выравнивание по оси X */
+
+            align-content: end;
+            /* align-content: start, center, end;  выравнивание по оси Y  */
+
+            /* align-items: start; */
+            /* align-items: start, center, end; выравнивание относительно самой ячейки по оси Y */
+
+            /* justify-items: center; */ 
+            /* justify-items: start, center, end; выравнивание относительно ячейки по оси X  */
+        }
+        .item_3{
+            /* justify-self: center; */
+            /* justify-self: start center end; выравнивать конкретную ячейку по оси X  */
+
+            /* grid-column-start: 1; */
+            /* grid-column-start: указывает с какой колонки будет начинаться элемент */
+            /* grid-column-end: 3; */
+            /* gridn-column-start: указывает по какую колонку будет заканчиваться элемент */
+
+            grid-column: 1/3;
+            /* grid-column: заменят grid-column-start,end */
+
+            /* grid-row-start: 1;  
+            grid-row-end: 4; */
+             /* grid-row-start: указывает с какую строку будет начинаться элемент
+                grid-row-end: указывает по какую строку будет заканчиваться элемент */
+
+            grid-row: 1/3;
+            /* grid-row: заменяет grid-row-start, end */
+            
+        }
+        .item{
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <div class="conteinter">
+        <div class="item item_1">Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, . Doloremque consectetur, deleniti culpa odio rerum omnis obcaecati! Non, consectetur adipisicing elit. Accusamus quae assumenda tempore non numquam optio eius dolores nul voluptate quasi reiciendis?</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quae assumenda tempore non numqua, consectetur adipisicing elit. Accusamus quae assumenda tempore non numquam optio eius dolores nulm optio eius dolores nulla sequi fugit.</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+    </div>
+    <script src="grid.js"></script>
+</body>
+</html>
